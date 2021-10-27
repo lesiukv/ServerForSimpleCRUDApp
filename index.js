@@ -15,8 +15,6 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true}));
 app.use(cors());
 app.use('/posts', postRoutes);
 
-// const CONNECTION_URL = 'mongodb+srv://pan_kit:12341234@cluster0.u6uy1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-
 const PORT = process.env.PORT;
 
 mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
